@@ -1,5 +1,4 @@
 -- 1.Напишите запрос, с помощью которого можно найти дубли в поле email из таблицы Sfaff.
-
 SELECT email, COUNT(*) AS count
 FROM Staff
 GROUP BY email
@@ -11,8 +10,7 @@ FROM Staff;
   
 -- 3.Напишите запрос, с помощью которого можно определить должность (Jobtitles.name) со вторым по величине уровнем зарплаты.
 SELECT jobtitle 
-FROM Staff
-JOIN Jobtitles ON Staff.jobtitle_id = Jobtitles.jobtitle_id 
+FROM Staff JOIN Jobtitles ON Staff.jobtitle_id = Jobtitles.jobtitle_id 
 WHERE salary = (
 SELECT MAX(salary) 
 FROM Staff 
